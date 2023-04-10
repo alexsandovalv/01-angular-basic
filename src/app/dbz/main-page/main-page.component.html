@@ -1,1 +1,29 @@
-<p>main-page works!</p>
+
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <app-personajes [data]="personajes">
+    </app-personajes>
+    <!-- <h3>Personajes</h3>s
+    <hr>
+    <ul >
+      <li *ngFor="let persona of personajes;">
+        {{persona.nombre}} - {{persona.poder | number}}
+      </li>
+    </ul> -->
+  </div>
+
+  <div class="col">
+
+    <app-agregar
+      [personajes]="personajes"
+      [nuevo]="nuevo"
+    >
+
+    </app-agregar>
+
+
+  </div>
+</div>
