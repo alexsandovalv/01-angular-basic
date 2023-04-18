@@ -11,13 +11,13 @@ export class PersonajesComponent {
 
   //@Input('data') personajes: Personaje[] = [];
 
-  get personajes() {
-    return this.dbzService.personajes
-  }
+
   constructor(private dbzService: DbzService) {
 
   }
 
+  @Input('data')
+  public personajes: Personaje[] = []
 
   @Output()
   public onDelete : EventEmitter<string> = new EventEmitter();

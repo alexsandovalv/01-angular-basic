@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { v4 as uuid } from 'uuid';
+import {v4 as uuid} from 'uuid';
 
 import {Personaje} from "../interfaces/dbz.interface";
 
@@ -37,9 +37,9 @@ export class DbzService {
   }
 
   addPersonaje(item: Personaje) {
-    const newCharacter :Personaje = {
+    const newCharacter: Personaje = {
       id: uuid(), ...item
-    }
+    };
     this.personajes.push(newCharacter);
   }
 
@@ -47,10 +47,9 @@ export class DbzService {
     this.personajes.splice(index, 1);
   }*/
 
-  deletePersonajeById(id:string){
-    this.personajes = this.personajes.filter( p => p.id
-     !== id);
-
+  deletePersonajeById(id: string) {
+    this.personajes = this.personajes.filter(p => p.id
+      !== id);
   }
 
 }

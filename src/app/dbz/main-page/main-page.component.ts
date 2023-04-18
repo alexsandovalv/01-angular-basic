@@ -10,9 +10,7 @@ import {DbzService} from "../services/dbz.service";
 })
 export class MainPageComponent {
 
-
-  constructor(private dbzService: DbzService) {
-  }
+  constructor(private dbzService: DbzService) { }
 
   get personajes(): Personaje[] {
     return [...this.dbzService.personajes];
@@ -23,12 +21,11 @@ export class MainPageComponent {
   }
 
   onDeletePersonaje( id:string ):void {
-    this.dbzService.deletePersonajeById( id )
+    this.dbzService.deletePersonajeById( id );
   }
 
   onNewPersonaje( personaje: Personaje ){
     this.dbzService.addPersonaje( personaje);
   }
-
 
 }
