@@ -5,7 +5,8 @@
 <div class="row">
   <div class="col">
 
-    <app-personajes [data]="personajes">
+    <app-personajes [data]="personajes" (onDelete)="onDeletePersonaje( $event )"
+    >
     </app-personajes>
 
   </div>
@@ -13,8 +14,8 @@
   <div class="col">
 
     <app-agregar
-      [nuevo]="nuevo"
-      (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"
+      [character]="nuevo"
+      (onNuevoPersonaje)="onNewPersonaje( $event )"
     >
     </app-agregar>
 

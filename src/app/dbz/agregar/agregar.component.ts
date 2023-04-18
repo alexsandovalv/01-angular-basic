@@ -8,7 +8,7 @@ import {Personaje} from "../interfaces/dbz.interface";
 })
 export class AgregarComponent {
 
-  @Input() nuevo: Personaje = {
+  @Input() character: Personaje = {
     nombre: '',
     poder: 0
   }
@@ -16,12 +16,12 @@ export class AgregarComponent {
   @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter<Personaje>()
 
   agregar(  ){
-    if( this.nuevo.nombre.trim().length == 0 ){ return ; }
+    if( this.character.nombre.trim().length == 0 ){ return ; }
 
-    console.log(this.nuevo)
-    this.onNuevoPersonaje.emit( this.nuevo );
+    console.log(this.character)
+    this.onNuevoPersonaje.emit( this.character );
 
-    this.nuevo = {
+    this.character = {
       nombre:'',
       poder:0
     }
